@@ -223,4 +223,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
 });
 
+// branch is tested and working fine, now we will merge it to main branch and deploy the code to production server.
+
 
