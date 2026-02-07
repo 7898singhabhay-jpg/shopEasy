@@ -1,0 +1,270 @@
+/* =====================
+   RESET & BASE STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  background-color: #ffffff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header a:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Cart count badge */
+#cart-count {
+  background-color: #ff4757;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* =====================
+   MAIN CONTENT
+===================== */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+main h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+/* =====================
+   SEARCH INPUT
+===================== */
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 25px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* =====================
+   PRODUCT GRID
+===================== */
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* =====================
+   PRODUCT CARD
+===================== */
+#product-container > div {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#product-container > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+#product-container h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+#product-container p {
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: #555;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+button {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.03);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #cart-count {
+    margin-left: 0;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+}
+
+
+/* =====================
+   CART PAGE STYLES
+===================== */
+
+/* Cart container */
+#cart-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Individual cart item */
+#cart-container > div {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#cart-container > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Cart item text */
+#cart-container h4 {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+#cart-container p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Remove button */
+#cart-container button {
+  background-color: #ff4757;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+#cart-container button:hover {
+  background-color: #e84118;
+}
+
+/* Total price box */
+#total-price {
+  margin-top: 30px;
+  padding: 18px 22px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: right;
+}
+
+/* Empty cart message (optional future use) */
+.empty-cart {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* =====================
+   RESPONSIVE (CART)
+===================== */
+@media (max-width: 600px) {
+  #cart-container > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #total-price {
+    text-align: center;
+  }
+}
+
